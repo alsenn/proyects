@@ -63,7 +63,7 @@ body p {
 }
 
 .img .image {
-    background-image: url(/img/imgD.jpg);
+    background-image: url(imgD.jpg);
     background-position: 50%;
     border-radius: 15px 0 0 15px;
     height: 60vh;
