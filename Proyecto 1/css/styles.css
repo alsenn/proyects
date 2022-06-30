@@ -1,0 +1,199 @@
+/*Font Link*/
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,700&family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&display=swap');
+
+/*General styles*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--cream);
+}
+
+body p {
+    font-size: 1.4rem;
+}
+
+.info h3,
+.info p,
+.cart {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.info h1,
+.info .prices {
+    font-family: 'Fraunces', serif;
+}
+
+/*Vars*/
+
+:root {
+    --cream: hsl(30, 38%, 92%);
+    --dCyan: hsl(158, 36%, 37%);
+    --dGBlue: hsl(228, 12%, 48%);
+    --vDBlue: hsl(212, 21%, 14%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/*Main*/
+
+.container {
+    background-color: var(--white);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    height: 60vh;
+    margin: 10% auto;
+    width: 60vw;
+}
+
+/*Image*/
+
+.img {
+    height: 60vh;
+}
+
+.img .image {
+    background-image: url(/img/imgD.jpg);
+    background-position: 50%;
+    border-radius: 15px 0 0 15px;
+    height: 60vh;
+    width: 30vw;
+}
+
+/*Parfum Description*/
+
+/*Titles*/
+
+.info {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    padding: 0 5rem;
+    width: 30vw;
+}
+
+.info .parfum {
+    color: var(--dGBlue);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.info h1 {
+    font-size: 4rem;
+}
+
+/*Description*/
+
+.info .description {
+    color: var(--dGBlue);
+    font-size: 2rem;
+}
+
+/*Price*/
+
+.info .prices {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.info .prices h2 {
+    color: var(--dCyan);
+    display: inline;
+    font-size: 3rem;
+}
+
+
+.info .prices .price {
+    color: var(--dGBlue);
+    font-size: 2rem;
+    text-decoration: line-through;
+}
+
+/*Add to cart button*/
+
+.info .cart {
+    color: whitesmoke;
+    background-color: var(--dCyan);
+    border-radius: 10px;
+    font-size: 2.2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: all 1s;
+}
+
+.info .cart:hover {
+    background-color: var(--vDBlue);
+    cursor: pointer;
+}
+
+/*Media query to [iPhone SE (375px x 667px]*/
+
+@media screen and (max-width: 375px) {
+
+    .container {
+        flex-flow: row wrap;
+        height: 95vh;
+        margin: 6% auto;
+        width: 90vw;
+    }
+
+    .img {
+        height: 35vh;
+    }
+
+    .img .image {
+        background-position: 0;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+        height: 35vh;
+        width: 90vw;
+    }
+
+    .info {
+        flex-flow: column nowrap;
+        height: 80vw;
+        justify-content: space-between;
+        padding: 0 2rem;
+        width: 90vw;
+    }
+
+    .info .description {
+        color: var(--dGBlue);
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+
+    .info h1 {
+        font-size: 3rem;
+    }
+
+    .info .prices {
+        justify-content: space-between;
+        width: 70%;
+    }
+
+
+    .info .prices h2 {
+        font-size: 3rem;
+    }
+
+    .info .prices .price {
+        font-size: 1.5rem;
+    }
+
+    .info .cart {
+        font-size: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+}
